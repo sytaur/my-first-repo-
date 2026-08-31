@@ -13,7 +13,15 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("hi")
+            Text("Hi counter")
+                .bold()
+                .foregroundStyle(Color.red)
+                .font(.largeTitle)
+            Stepper("Counter: " + "\(Int.random(in: -1000000...100000))", onIncrement: {}, onDecrement: {})
+            Image("hi")
+                .resizable()
+                .scaledToFit()
+            
         }
         .padding()
     }
